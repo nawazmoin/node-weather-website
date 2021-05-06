@@ -12,7 +12,8 @@ const forecast=(latitude,longitude,callback)=>{
             // console.log(response.body.error);
         }
         else{
-            callback(undefined,`${response.body.current.weather_descriptions[0]}. It is currently ${response.body.current.temperature} degrees out. It feels like ${response.body.current.feelslike} degrees out.`);
+            console.log(response.body);
+            callback(undefined,`${response.body.current.weather_descriptions[0]}. It is currently ${response.body.current.temperature} degrees out. It feels like ${response.body.current.feelslike} degrees out, and the humidity is ${response.body.current.temperature}%`);
         }
     })
 
